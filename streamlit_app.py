@@ -25,8 +25,10 @@ st.write(
 )
 
 # Get fruit options from Snowflake
-my_dataframe = session.table("smoothies.public.fruit_options").select(col("FRUIT_NAME"))
-
+my_dataframe = session.table("smoothies.public.fruit_options").select(
+    col("FRUIT_NAME"),
+    col("SEARCH_ON")
+)
 # Keep this commented out to keep the app tidy
 # st.dataframe(data=my_dataframe, use_container_width=True)
 
