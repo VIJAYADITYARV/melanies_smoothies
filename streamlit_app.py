@@ -63,8 +63,9 @@ if ingredients_list:
         # Display nutrition information
         st.subheader(fruit_chosen + " Nutrition Information")
 
+        # Use SEARCH_ON for the API call
         smoothiefroot_response = requests.get(
-            "https://my.smoothiefroot.com/api/fruit/" + fruit_chosen
+            "https://my.smoothiefroot.com/api/fruit/" + search_on
         )
 
         sf_df = st.dataframe(
